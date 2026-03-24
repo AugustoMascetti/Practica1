@@ -7,6 +7,7 @@ categorias ={
 	"CuatroVocales": ["variable"]
 }
 
+#La cantidad de rondas depende de la cantidad de palabras que hay en la categoria, en caso de que haya una sola palabra se juega una sola ronda.
 
 points = 0
 
