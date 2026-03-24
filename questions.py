@@ -14,13 +14,24 @@ guessed = []
 attempts = 6
 points = 0
 
-word = random.choice(words)
-
-
+categorias ={
+	"UnaVocal":["python"],
+	"DosVocales":["lista","bucle"],
+	"TresVocales":["programa","funcion","cadena","entero"],
+	"CuatroVocales":["variable"]
+	}
 
 print("¡Bienvenido al Ahorcado!")
 print()
 
+print(""" Categorias 
+	-UnaVocal
+	-DosVocales
+	-TresVocales
+	-CuatroVocales """)
+print()
+
+word = random.choice(categorias [input("Escribi una categoria (respetar mayusculas): ")])
 
 while attempts > 0:
 # Mostrar progreso: letras adivinadas y guiones para las que faltan
