@@ -1,13 +1,13 @@
 import random
 words = [
-	"python",
-	"programa",
-	"variable",
-	"funcion",
-	"bucle",
-	"cadena",
-	"entero",
-	"lista",
+"python",
+"programa",
+"variable",
+"funcion",
+"bucle",
+"cadena",
+"entero",
+"lista",
 ]
 word = random.choice(words)
 guessed = []
@@ -25,6 +25,7 @@ while attempts > 0:
 		else:
 			progress += "_ "
 	print(progress)
+	
 # Verificar si el jugador ya adivinó la palabra completa
 	if "_" not in progress:
 		print("¡Ganaste!")
@@ -34,18 +35,22 @@ while attempts > 0:
 	print(f"Letras usadas: {', '.join(guessed)}")
 	
 	letter = input("Ingresá una letra: ")
-
+	letter = letter.lower()
+		
 	if letter in guessed:
 		print("Ya usaste esa letra.")
+	elif  len(letter)>1 or not letter.isalpha():
+		print()
+		print  ("Entrada no válida")
 	elif letter in word:
 		guessed.append(letter)
 		print("¡Bien! Esa letra está en la palabra.")
 	else:
-		guessed.append(letter)
-		attempts -= 1
-		print("Esa letra no está en la palabra.")
+			guessed.append(letter)
+			attempts -= 1
+			print("Esa letra no está en la palabra.")
 		
 	print()
-	
 else:
 	print(f"¡Perdiste! La palabra era: {word}")
+
